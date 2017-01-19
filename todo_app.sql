@@ -15,4 +15,9 @@ INSERT INTO "tasks" ("title", "description") VALUES ('Study PostgreSQL', 'Read a
 SELECT "title" FROM "tasks" WHERE "completed_at" IS NULL;
 UPDATE "tasks" SET "completed_at" = now() WHERE "title" = 'Study SQL';
 SELECT "title", "description" FROM "tasks" WHERE "completed_at" IS NULL;
-SELECT * FROM "tasks";
+SELECT * FROM "tasks" order by "created_at" DESC;
+INSERT INTO "tasks" ("title", "description") VALUES ('mistake 1', 'a test entry');
+INSERT INTO "tasks" ("title", "description") VALUES ('mistake 2', 'another test entry');
+INSERT INTO "tasks" ("title", "description") VALUES ('third mistake', 'another test entry');
+SELECT * FROM "tasks" WHERE "title" LIKE '%mistake%';
+
