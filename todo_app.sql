@@ -1,4 +1,4 @@
-\c matthewtirrell
+ \c matthewtirrell
 DROP USER "michael";
 CREATE USER "michael" WITH PASSWORD 'stonebreaker';
 DROP DATABASE IF EXISTS "todo_app";
